@@ -26,9 +26,7 @@ VEZES=5
 executar_programa "../rank_sort" $VEZES "rank_sort_linear.log" $NUMERO_ELEMENTOS
 
 
-NUMERO_THREADS=(1 2 4 8 12 24)
-
-for NUM_THREAD in $NUMERO_THREADS
+for NUM_THREAD in 1 2 4 8 12 24
 do
     PTHREAD_LOG="rank_sort_pthread.log"
     OPENMP_LOG="rank_sort.openmp.log"
