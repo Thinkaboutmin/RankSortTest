@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # Roda o programa x (tem que ser um rank sort) vezes enquanto passa
 # tudo do output padrão para um arquivo log.
 function executar_programa {
