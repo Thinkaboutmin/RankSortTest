@@ -31,12 +31,12 @@ int main(int argc, char ** argv) {
     try {
         elementos_lista = std::stoi(argv[2]);
     } catch (std::invalid_argument error) {
-        std::cerr << "Não foi possível compreender o valor " << argv[1] << " para o número de elementos";
+        std::cerr << "Não foi possível compreender o valor " << argv[2] << " para o número de elementos";
         return 1;
     } catch(std::out_of_range error) {
         std::cerr << "O número de elementos foi muito grande.";
         return 1;
-    } 
+    }
 
 
     std::vector<size_t> lista = gerarListaSorteada(elementos_lista);

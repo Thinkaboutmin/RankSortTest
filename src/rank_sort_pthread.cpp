@@ -29,12 +29,12 @@ void computar_lista_pthread(const std::vector<size_t> & lista_comp, std::vector<
  * Caso falte algum elemento, divisão quebrada, ele é realizado pela thread principal
  * junto da parte definida para as outras threads afinal, ela é uma thread também...
  */
-std::vector<size_t> sortear_pthread(const std::vector<size_t> lista,size_t thread_num) {
+std::vector<size_t> sortear_pthread(const std::vector<size_t> & lista,size_t & thread_num) {
     std::vector<size_t> lista_sorteada(lista.size());
 
     // Segura outras threads menos a principal.
     std::vector<std::thread *> threads(thread_num - 1);
-    size_t thread_workload = trunc(lista.size() / thread_num);
+    size_t thread_workload = std::trunc(lista.size() / thread_num);
     size_t available_work = 0;
     for (auto & thread : threads) {
         auto alcance = new std::pair<size_t, size_t>(

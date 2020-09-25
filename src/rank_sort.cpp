@@ -12,7 +12,7 @@ void computar_lista(const std::vector<size_t> & lista_comp, std::vector<size_t> 
     lista[rank] = elem_to_rank;
 }
 
-std::vector<size_t> sortear(const std::vector<size_t> lista) {
+std::vector<size_t> sortear(const std::vector<size_t> & lista) {
     std::vector<size_t> lista_sorteada(lista.size());
 
     for (const size_t & elemento : lista) {

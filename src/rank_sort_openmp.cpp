@@ -10,7 +10,7 @@
  * threads concorram por ela sem necessitar gerenciar os trabalhos
  * a serem realizados.
  */
-std::vector<size_t> sortear_openmp(const std::vector<size_t> lista, size_t thread_num) {
+std::vector<size_t> sortear_openmp(const std::vector<size_t> & lista, size_t & thread_num) {
     std::vector<size_t> lista_sorteada(lista.size());
 
     // Muito mais rápido de se fazer assim...
