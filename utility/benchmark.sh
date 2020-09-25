@@ -29,7 +29,7 @@ executar_programa "../rank_sort" $VEZES "rank_sort_linear.log" $NUMERO_ELEMENTOS
 for NUM_THREAD in 1 2 4 8 12 24
 do
     PTHREAD_LOG="rank_sort_pthread.log"
-    OPENMP_LOG="rank_sort.openmp.log"
+    OPENMP_LOG="rank_sort_openmp.log"
     executar_programa "../rank_sort_pthread" $VEZES "$PTHREAD_LOG" $NUM_THREAD $NUMERO_ELEMENTOS
     executar_programa "../rank_sort_openmp" $VEZES "$OPENMP_LOG" $NUM_THREAD $NUMERO_ELEMENTOS
 done
