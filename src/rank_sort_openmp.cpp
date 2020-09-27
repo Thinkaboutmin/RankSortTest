@@ -16,7 +16,7 @@ std::vector<size_t> sortear_openmp(const std::vector<size_t> & lista, size_t & t
     // Muito mais rápido de se fazer assim...
     #pragma omp parallel num_threads(thread_num)
     {
-        #pragma omp loop
+        #pragma omp for
         for (size_t i = 0; i < lista.size(); ++i) {
             computar_lista(lista, lista_sorteada, lista[i]);
         }
